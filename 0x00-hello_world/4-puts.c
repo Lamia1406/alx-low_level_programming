@@ -1,8 +1,9 @@
 #include <stdio.h>
-/*
- * the main: the entry point in C
- * return 0: when main returns,the program stops
- * puts: to write a line or string to the output stream ( stdout ) that is up to
+/**
+ * main -  the entry point in C
+ *
+ * Description:the program contains a puts function that writes a line or string to the output stream ( stdout ) that is up to
+ * Return: 0 that means there are no errors
  */
 int main(void)
 {
