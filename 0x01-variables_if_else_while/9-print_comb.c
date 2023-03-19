@@ -14,8 +14,11 @@ int main(void)
 	while (n <= 57)
 	{
 		putchar(n);
-		putchar(44);
-		putchar(32);
+		if (n < 57)
+		{
+			putchar(44);
+			putchar(32);
+		}
 		n++;
 	}
 	putchar(10);
