@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- *main - entry point of the program
- *Description: this program prints _putchar
- *Return: 0 successful operation
+ *print_alphabet - entry point of the program
+ *Description: this program alphabet
+ *Return: all alphabets
  */
-print_alphabet()
+void print_alphabet(void)
 {
 	char i;
 
