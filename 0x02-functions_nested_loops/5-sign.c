@@ -12,14 +12,14 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		return (+1);
+		return puts("+1");
 	}
 	else if (n < 0)
 	{
-		return (-1);
+		return puts("-1");
 	}
 	else
 	{
-		return (00);
+		return puts("00");
 	}
 }
