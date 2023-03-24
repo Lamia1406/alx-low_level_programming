@@ -1,7 +1,6 @@
 #include "main.h"
-#include <ctype.h>
 /**
- * _mul - entry point of the program
+ * mul - entry point of the program
  * @a: the user input first number
  * @b: the user input second number
  * Description: this program multiply two numbers
