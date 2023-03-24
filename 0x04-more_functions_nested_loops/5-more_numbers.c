@@ -14,8 +14,8 @@ void more_numbers(void)
 		if (j == 10)
 			i = '0';
 		if (j >= 10)
-			_putchar('1');
-		_putchar(i);
+			putchar('1');
+		putchar(i);
 	}
-	_putchar(10);
+	putchar('\n');
 }
