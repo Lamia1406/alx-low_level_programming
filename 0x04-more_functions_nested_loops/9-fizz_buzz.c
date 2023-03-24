@@ -1,14 +1,14 @@
-#include "main.h"
+#include <stdio.h>
 /**
- * FizzBuzz - entry point of the program
+ * main - entry point of the program
  * Description:	this program prints numbers from 1 to 100 except for:
  *		multiplies of 3 and 5 (prints FizzBuzz)
  *		multiplies of only 3 (prints Fizz)
  *		multiplies of only 5 (prints Buzz)
  *
- * Return: void
+ * Return: 0 (Successful)
  */
-void FizzBuzz(void)
+int  main(void)
 {
 	int i;
 
@@ -26,4 +26,5 @@ void FizzBuzz(void)
 			printf(" ");
 	}
 	printf("\n");
+	return (0);
 }

@@ -6,6 +6,5 @@ int _isdigit(int c);
 void print_triangle(int size);
 int mul(int a, int b);
 void print_numbers(void);
-void FizzBuzz(void);
 #endif
 
