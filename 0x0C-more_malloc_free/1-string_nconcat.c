@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-#include <string.h>
 /**
 * string_nconcat - the entry point of the program
 * @s1: the first string input
@@ -35,7 +34,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (ptr == NULL)
 		return (NULL);
-	strncpy(ptr, s1, lenS1);
 	for (i = 0 ; i < lenS1 ; i++)
 		ptr[i] = s1[i];
 	for (i = lenS1, j = 0 ; i < concatLen ; j++, i++)
