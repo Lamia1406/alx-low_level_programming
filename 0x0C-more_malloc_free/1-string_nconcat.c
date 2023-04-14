@@ -16,7 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *ptr;
 	int lenS1;
 	int lenS2;
-	int i;
+	int i, j;
 
 	for (i = 0 ; s1[i] ; i++)
 		lenS1 = i;
@@ -36,7 +36,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (ptr == NULL)
 		return (NULL);
 	strncpy(ptr, s1, lenS1);
-	strncat(ptr, s2, n);
+	for (i = 0 ; i < lenS1 ; i++)
+		ptr[i] = s1[i];
+	for (i = lenS1, j = 0 ; i < concatLen ; j++, i++)
+		ptr[i] = s2[j];
 	ptr[concatLen] = '\0';
 	return (ptr);
 }
