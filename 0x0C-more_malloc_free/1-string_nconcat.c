@@ -18,21 +18,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL)
 		lenS1 = 0;
 	else
-	{
-		for (i = 0 ; s1[i] ; i++)
-			lenS1 = i;
-		lenS1++;
-	}
 		for (lenS1 = 0 ; s1[lenS1] != '\0' ; lenS1++)
 			;
 	if (s2 == NULL)
 		lenS2 = 0;
 	else
-	{
-		for (i = 0 ; s2[i] ; i++)
-			lenS2 = i;
-		lenS2++;
-	}
 		for (lenS2 = 0 ; s2[lenS2] != '\0' ; lenS2++)
 			;
 	if (n > lenS2)
