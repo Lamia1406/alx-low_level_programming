@@ -9,10 +9,11 @@
  */
 int main(int argc, char **argv)
 {
-	int result = 0;
+	int result;
 	int i;
 	int j;
 
+	result = 0;
 	for (i = 1 ; i < argc ; i++)
 	{
 		for (j = 0 ; argv[i][j] != '\0' ; j++)
