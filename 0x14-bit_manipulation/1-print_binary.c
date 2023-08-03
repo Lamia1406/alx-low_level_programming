@@ -16,18 +16,18 @@ void print_binary(unsigned long int n)
 	{
 		if (n < 2)
 		{
-			printf("%ld", n);
+			_putchar('0' + n);
 			break;
 		}
 		if (n & mask)
 		{
-			printf("1");
+			_putchar('1');
 			biggest_p_1 = 1;
 		}
 		else
 		{
 			if (biggest_p_1 == 1)
-				printf("0");
+				_putchar('0');
 		}
 		mask >>= 1;
 	}
