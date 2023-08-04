@@ -12,9 +12,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int results = n ^ m;
 	unsigned int count = 0;
 	int i;
-	unsigned long int mask = 1UL << 31;
+	unsigned long int mask = 1UL << 63;
 
-	for (i = 0; i < 32; i++)
+	for (i = 0; i < 64; i++)
 	{
 		if (results & mask)
 		{
