@@ -10,9 +10,9 @@
 void print_binary(unsigned long int n)
 {
 	int i, biggest_p_1 = 0;
-	unsigned long int mask = 1UL << 31;
+	unsigned long int mask = 1UL << 63;
 
-	for (i = 0; i < 32; i++)
+	for (i = 0; i < 64; i++)
 	{
 		if (n < 2)
 		{
