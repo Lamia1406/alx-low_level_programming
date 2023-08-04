@@ -9,18 +9,9 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int i, res, binary_digits = 0;
-	long int temp_n = n;
+	unsigned int i, res;
 
-	if (n < 2)
-		return (n);
-
-	while (temp_n > 0)
-	{
-		temp_n /= 2;
-		binary_digits++;
-	}
-	if (binary_digits < index + 1)
+	if (index > 64)
 		return (-1);
 	for (i = 0; i <= index ; i++)
 	{
