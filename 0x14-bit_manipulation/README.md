@@ -9,4 +9,5 @@
 - add 3-set_bit.c
 - add 4-clear_bit.c
 - add 5-flip_bits.c
+- add 100-get_endianness.c
                                                                          
