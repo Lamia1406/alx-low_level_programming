@@ -11,7 +11,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int results = n ^ m;
 	unsigned int count = 0;
-	int i, biggest_p_1 = 0;
+	int i;
 	unsigned long int mask = 1UL << 31;
 
 	for (i = 0; i < 32; i++)
@@ -19,7 +19,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		if (results & mask)
 		{
 			count++;
-			biggest_p_1 = 1;
 		}
 		mask >>= 1;
 	}
