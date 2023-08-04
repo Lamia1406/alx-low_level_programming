@@ -15,7 +15,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (n < 2)
 		return (n);
 
-	while (temp_n >= 0)
+	while (temp_n > 0)
 	{
 		temp_n /= 2;
 		binary_digits++;
