@@ -13,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fp;
 	int c;
-	size_t count = 0;
+	size_t count = 0, actual_characters = 0;
 
 	if (filename == NULL)
 		return (0);
@@ -25,6 +25,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		putchar(c);
 		count++;
 	}
+	fseek(fp, 0, SEEK_END);
+	actual_characters = ftell(fp);
+	if (actual_characters < letters)
+		fprintf(stderr, "Error\n", filename, actual_characters);
 	fclose(fp);
 	return (count);
 }
