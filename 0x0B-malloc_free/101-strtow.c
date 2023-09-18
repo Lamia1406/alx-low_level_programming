@@ -16,19 +16,20 @@ char **strtow(char *str)
 
 	if (str == NULL || strcmp(str, "") == 0)
 		return (NULL);
-
 	for (i = 0; str[i] != '\0'; i++)
 		if (str[i] != ' ')
 			word_count++;
 	if (word_count == 0)
 		return (NULL);
-	temp_str = (char *)malloc(sizeof(char) * (strlen(str) + 1));
+	temp_str = strdup(str);
 	if (temp_str == NULL)
 		return (NULL);
-	strcpy(temp_str, str);
 	ptr = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (ptr == NULL)
+	{
+		free(temp_str);
 		return (NULL);
+	}
 	word = strtok(temp_str, " ");
 	i = 0;
 	while (word != NULL)
