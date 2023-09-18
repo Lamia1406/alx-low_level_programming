@@ -12,15 +12,20 @@ char **strtow(char *str)
 {
 	char **ptr, *word;
 	int i, j, word_count = 0;
-	char *temp_str = (char *)malloc(sizeof(char) * (strlen(str) + 1));
+	char *temp_str;
 
-	strcpy(temp_str, str);
-	if (str == NULL || strcmp(str, "") == 0 || strcmp(str, " ") == 0)
+	if (str == NULL || strcmp(str, "") == 0)
 		return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
-		if (str[i] != 32  && (i == 0 || str[i - 1] == 32))
+		if (str[i] != ' ')
 			word_count++;
+	if (word_count == 0)
+		return (NULL);
+	temp_str = (char *)malloc(sizeof(char) * (strlen(str) + 1));
+	if (temp_str == NULL)
+		return (NULL);
+	strcpy(temp_str, str);
 	ptr = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (ptr == NULL)
 		return (NULL);
