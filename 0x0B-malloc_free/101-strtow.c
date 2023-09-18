@@ -15,7 +15,7 @@ char **strtow(char *str)
 	char *temp_str = (char *)malloc(sizeof(char) * (strlen(str) + 1));
 
 	strcpy(temp_str, str);
-	if (str == NULL || strcmp(str, " ") == 0)
+	if (str == NULL || strcmp(str, "") == 0 || strcmp(str, " ") == 0)
 		return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
