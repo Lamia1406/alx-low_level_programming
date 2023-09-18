@@ -33,7 +33,7 @@ char **strtow(char *str)
 	i = 0;
 	while (word != NULL)
 	{
-		ptr[i] = (char *)malloc(sizeof(char) * (strlen(word) + 1));
+		ptr[i] = strdup(word);
 		if (ptr[i] == NULL)
 		{
 			for (j = 0; j < i; j++)
