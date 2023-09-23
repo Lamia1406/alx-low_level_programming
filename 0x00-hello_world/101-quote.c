@@ -9,5 +9,5 @@ int main(void)
 {
 	write(STDERR_FILENO, "and that piece of art is useful\"", 32);
 	write(STDERR_FILENO, " - Dora Korpar, 2015-10-19\n", 27);
-	return (0);
+	return (1);
 }
