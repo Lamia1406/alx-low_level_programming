@@ -8,16 +8,16 @@
  */
 int main(void)
 {
-	char  a, b, c, d;
+	int  a, b, c, d;
 
-	void print_num(char a, char b, char c, char d);
-	for (a = '0'; a <= '9' ; a++)
+	void print_num(int a, int b, int c, int d);
+	for (a = 48; a <= 57 ; a++)
 	{
-		for (b = '0' ; b <= '9' ; b++)
+		for (b = 48 ; b <= 57 ; b++)
 		{
-			for (c = '0' ; c <= '9' ; c++)
+			for (c = 48 ; c <= 57 ; c++)
 			{
-				for (d = '1' ; d <= '9' ; d++)
+				for (d = 49 ; d <= 57 ; d++)
 				{
 					print_num(a, b, c, d);
 				}
@@ -40,7 +40,7 @@ int main(void)
  * @c: third digit
  * @d: fourth digit
  */
-void print_num(char a, char b, char c, char d)
+void print_num(int a, int b, int c, int d)
 {
 	if ((a - c) * 10 != d - b && c * 10 + d - (a * 10 + b) > 0)
 	{
