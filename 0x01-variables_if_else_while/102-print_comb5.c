@@ -8,52 +8,29 @@
  */
 int main(void)
 {
-	int  a, b, c, d;
+	int num1, num2;
 
-	void print_num(int a, int b, int c, int d);
-	for (a = 48; a <= 57 ; a++)
+	for (num1 = 0; num1 <= 99; num1++)
 	{
-		for (b = 48 ; b <= 57 ; b++)
+		for (num2 = num1; num2 <= 99; num2++)
 		{
-			for (c = 48 ; c <= 57 ; c++)
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+			if (num1 != 99 || num2 != 99)
 			{
-				for (d = 49 ; d <= 57 ; d++)
-				{
-					print_num(a, b, c, d);
-				}
-				d = 48;
+				putchar(',');
+				putchar(' ');
 			}
-			d = 48;
-			c = 48;
 		}
-		b = 48;
-		c = 48;
-		d = 48;
 	}
+	putchar('\n');
 	return (0);
 }
-/**
- * print_num - function that prints a 4 digit num.
- * @a: first digit
- * @b: second digit
- * @c: third digit
- * @d: fourth digit
- */
-void print_num(int a, int b, int c, int d)
-{
-	if ((a - c) * 10 != d - b && c * 10 + d - (a * 10 + b) > 0)
-	{
-		putchar(a);
-		putchar(b);
-		putchar(32);
-		putchar(c);
-		putchar(d);
-		if (((a - 48) * 1000 + (b - 48) * 100 + (c - 48) * 10 + d - 48) != 9899)
-		{
-			putchar(44);
-			putchar(32);
-		}
-		else
-			putchar(10);
-	}
-}
+
+
+
+
+
