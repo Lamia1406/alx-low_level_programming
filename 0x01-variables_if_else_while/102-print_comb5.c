@@ -30,7 +30,6 @@ int main(void)
 		c = 48;
 		d = 48;
 	}
-	putchar(10);
 	return (0);
 }
 /**
@@ -49,10 +48,12 @@ void print_num(int a, int b, int c, int d)
 		putchar(32);
 		putchar(c);
 		putchar(d);
-		if ((a - 57) * 100 + (b - 56) * 10 + c - 57 < (-d + 57) / 10)
+		if (((a - 48) * 1000 + (b - 48) * 100 + (c - 48) * 10 + d - 48) != 9899)
 		{
 			putchar(44);
 			putchar(32);
 		}
+		else
+			putchar(10);
 	}
 }
