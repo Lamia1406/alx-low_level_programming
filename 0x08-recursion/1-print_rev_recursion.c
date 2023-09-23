@@ -8,8 +8,7 @@
 */
 void _print_rev_recursion(char *s)
 {
-	void printc(char *c, int i);
-	int i = strlen(s);
+	int i = strlen(s) - 1;
 
 	printc(s, i);
 }
