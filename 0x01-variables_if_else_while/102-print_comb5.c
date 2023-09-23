@@ -8,30 +8,18 @@
  */
 int main(void)
 {
-	int a;
-	int b;
-	int c;
-	int d;
+	char  a, b, c, d;
 
-	for (a = 48 ; a <= 57 ; a++)
+	void print_num(char a, char b, char c, char d);
+	for (a = '0'; a <= '9' ; a++)
 	{
-		for (b = 48 ; b <= 57 ; b++)
+		for (b = '0' ; b <= '9' ; b++)
 		{
-			for (c = 48 ; c <= 57 ; c++)
+			for (c = '0' ; c <= '9' ; c++)
 			{
-				for (d = 49 ; d <= 57 ; d++)
+				for (d = '1' ; d <= '9' ; d++)
 				{
-					if ((a - c) * 10 != d - b && c * 10 + d - (a * 10 + b) > 0)
-					{
-						putchar(32);
-						putchar(a);
-						putchar(b);
-						putchar(32);
-						putchar(c);
-						putchar(d);
-						if ((a - 57) * 100 + (b - 56) * 10 + c - 57 < (-d + 57) / 10)
-							putchar(44);
-					}
+					print_num(a, b, c, d);
 				}
 				d = 48;
 			}
@@ -44,4 +32,27 @@ int main(void)
 	}
 	putchar(10);
 	return (0);
+}
+/**
+ * print_num - function that prints a 4 digit num.
+ * @a: first digit
+ * @b: second digit
+ * @c: third digit
+ * @d: fourth digit
+ */
+void print_num(char a, char b, char c, char d)
+{
+	if ((a - c) * 10 != d - b && c * 10 + d - (a * 10 + b) > 0)
+	{
+		putchar(a);
+		putchar(b);
+		putchar(32);
+		putchar(c);
+		putchar(d);
+		if ((a - 57) * 100 + (b - 56) * 10 + c - 57 < (-d + 57) / 10)
+		{
+			putchar(44);
+			putchar(32);
+		}
+	}
 }
