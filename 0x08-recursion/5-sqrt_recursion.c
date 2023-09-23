@@ -6,7 +6,7 @@
 */
 int _sqrt_recursion(int n)
 {
-	return (_sqrt(n, n));
+	return (_sqrt(n, 0));
 }
 /**
  * _sqrt - Computes the square root of a number using recursion.
@@ -16,9 +16,9 @@ int _sqrt_recursion(int n)
  */
 int _sqrt(int n, int i)
 {
-	if (i == 0 || n < 0)
+	if (i == n || n < 0)
 		return (-1);
-	if (i * i == n)
-		return (i);
-	return (_sqrt(n, i - 1));
+	if (i * i < n)
+		return (_sqrt(n, i + 1));
+	return (i);
 }
