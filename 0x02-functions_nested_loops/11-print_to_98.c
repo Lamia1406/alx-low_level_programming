@@ -1,38 +1,18 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *print_to_98 - entry point of the program
- *@num: the user input number
- *Description: this program prints numbers
- *Return: void
+ *print_to_98 -  prints all natural numbers from n to 98
+ * @n: the number to start from
+ *Return: all alphabets
  */
-void print_to_98(int num)
+void print_to_98(int n)
 {
-	if (num < 98)
+	int i = n;
+
+	while (i != 98)
 	{
-		for (num ; num <= 98 ; num++)
-		{
-			printf("%d", num);
-			if (num < 98)
-			{
-				printf(", ");
-			}
-		}
+		printf("%d, ", i);
+		i > 98 ? i-- : i++;
 	}
-	else if (num > 98)
-	{
-		for (num ; num >= 98 ; num--)
-		{
-			printf("%d", num);
-			if (num > 98)
-			{
-				printf(", ");
-			}
-		}
-	}
-	else
-	{
-		printf("98");
-	}
-	printf("\n");
+	printf("%d\n", i);
 }
