@@ -21,12 +21,9 @@ int is_prime_number(int n)
  */
 int prime(int main_num, int n, int i)
 {
-	if (n < 0)
-		return (0);
-	if (n == 0)
+	if (n <= 0)
 		return (i);
 	if (main_num % n == 0)
 		i++;
-	prime(main_num, n - 1, i);
-	return (0);
+	return (prime(main_num, n - 1, i));
 }
