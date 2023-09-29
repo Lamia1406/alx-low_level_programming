@@ -12,7 +12,7 @@ int main(void)
 	printf("1, 2, ");
 	for (i = 2; i < 98 ; i++)
 	{
-		printf("%lld", current);
+		printf("%ld", current);
 		if (i < 97)
 			printf(", ");
 		temp = current;
