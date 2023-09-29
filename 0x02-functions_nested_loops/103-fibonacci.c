@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	long int current = 3, temp, prev = 2, sum = 1;
+	long int current = 3, temp, prev = 2, sum = 2;
 
 	while (current < 4000000)
 	{
