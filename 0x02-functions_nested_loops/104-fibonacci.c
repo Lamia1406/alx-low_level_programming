@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i;
-	long long current = 3, temp, prev = 2;
+	long long int current = 3, temp, prev = 2;
 
 	printf("1, 2, ");
 	for (i = 2; i < 98 ; i++)
