@@ -7,7 +7,6 @@
  */
 int main(void)
 {
-	int i;
 	long int current = 3, temp, prev = 2;
 
 	printf("1, ");
