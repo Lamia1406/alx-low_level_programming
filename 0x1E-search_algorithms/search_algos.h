@@ -1,5 +1,7 @@
 #ifndef SEARCH_ALGORITHMS_H
 #define SEARCH_ALGORITHMS_H
+#include <stddef.h>
+#include <stdio.h>
 /**
  * struct listint_s - singly linked list
  *
